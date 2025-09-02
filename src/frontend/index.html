@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =======================================================
+       META & TITLE SECTION
+       =======================================================
+       - UTF-8 ensures support for special characters.
+       - Responsive viewport ensures mobile-friendliness.
+       - Title appears on the browser tab.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Similarity Finder 🔍</title>
+
+  <!-- =======================================================
+       CSS STYLESHEET
+       =======================================================
+       - style.css contains the custom UI styling for this page.
+  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- =======================================================
+       MAIN CONTAINER
+       =======================================================
+       - Wraps the entire content for better styling control.
+  -->
+  <div class="container">
+    
+    <!-- =======================================================
+         PAGE TITLE / HEADING
+         =======================================================
+         - Represents the main heading of the app.
+    -->
+    <h1>Issue Similarity Finder 🔍</h1>
+
+    <!-- =======================================================
+         FORM SECTION
+         =======================================================
+         - Collects issue title & description from the user.
+         - Submits data via JavaScript (handled in script.js).
+    -->
+    <form id="issueForm">
+      <!-- Input field for issue title -->
+      <input 
+        type="text" 
+        id="title" 
+        placeholder="Enter issue title" 
+        required
+      >
+
+      <!-- Textarea for detailed issue description -->
+      <textarea 
+        id="description" 
+        placeholder="Enter issue description" 
+        required
+      ></textarea>
+
+      <!-- Submit button to trigger similarity search -->
+      <button type="submit">Find Similar Issues</button>
+    </form>
+
+    <!-- =======================================================
+         RESULTS SECTION
+         =======================================================
+         - Dynamically populated with:
+           1. Top 5 similar issues in a table.
+           2. Helpful / Not Helpful feedback buttons.
+           3. Success or error messages.
+    -->
+    <div id="results"></div>
+  </div>
+
+  <!-- =======================================================
+       JAVASCRIPT FILE
+       =======================================================
+       - Handles:
+         1. Form submission.
+         2. Fetching results from Flask backend.
+         3. Rendering the results table dynamically.
+         4. Managing feedback interactions.
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
